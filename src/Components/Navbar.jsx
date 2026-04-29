@@ -1,6 +1,6 @@
 import React from 'react'
 import { ShoppingBag } from 'lucide-react'
-import { LockIcon } from 'lucide-react'
+import { User } from 'lucide-react'
 import { UserPlus } from 'lucide-react'
 import { LogOut } from 'lucide-react'
 import Link from 'next/link'
@@ -20,10 +20,24 @@ const Navbar = () => {
           <Link href="/">Profile</Link>
         </div>
         <div className='flex gap-5'>
+          <button className="group flex items-center gap-2 bg-white rounded-full border border-gray-200 py-1.5 px-4 shadow-sm cursor-pointer transition-all duration-300 hover:shadow-md hover:border-[#4F39F6]">
+  
+             <span className="text-gray-800 font-medium group-hover:text-[#4F39F6] transition-colors">
+              Login
+             </span>
+
+              <span className="bg-gradient-to-br from-[#9514FA] to-[#4F39F6] rounded-full p-2 flex items-center justify-center  transition-all duration-300 group-hover:scale-110 group-hover:rotate-12 shadow-lg shadow-indigo-200">
+                <User className="h-4 w-4 text-white" />
+              </span>
+
+          </button>
+
+
+
           <button className="group flex items-center gap-2 bg-white rounded-full border border-gray-200 py-1.5 px-4 shadow-sm cursor-pointer transition-all duration-300 hover:shadow-md hover:border-[#0f766e]">
   
               <span className="text-gray-800 font-medium group-hover:text-[#0f766e] transition-colors">
-                SignUp
+                Register
               </span>
 
               <span className="bg-[#0f766e] rounded-full p-2 flex items-center justify-center 
@@ -33,6 +47,8 @@ const Navbar = () => {
               </span>
 
           </button>
+
+
           <button className="group flex items-center gap-2 bg-white rounded-full border     border-gray-200 py-1.5 px-4 shadow-sm cursor-pointer transition-all duration-300 hover:shadow-md hover:border-red-500">
 
             <span className="text-gray-800 font-medium group-hover:text-red-500 transition-colors">
