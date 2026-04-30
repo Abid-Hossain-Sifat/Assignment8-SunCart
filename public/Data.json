@@ -1,0 +1,178 @@
+[
+  {
+    "id": 1,
+    "name": "UV Protection Sunglasses",
+    "brand": "SunShade",
+    "price": 15,
+    "rating": 4.7,
+    "stock": 10,
+    "description": "Stylish polarized sunglasses with 100% UV400 protection, perfect for beach days and summer outings.",
+    "image": "https://i.ibb.co.com/wFwshm6F/71596258415.png",
+    "category": "Sunglasses"
+  },
+  {
+    "id": 2,
+    "name": "Aviator Mirrored Sunglasses",
+    "brand": "GlareOff",
+    "price": 22,
+    "rating": 4.5,
+    "stock": 18,
+    "description": "Classic aviator frame with mirrored lenses for a bold summer look and maximum glare reduction.",
+    "image": "https://i.ibb.co.com/ZRj2Y3FR/image-1.png",
+    "category": "Sunglasses"
+  },
+  {
+    "id": 3,
+    "name": "Floral Sundress",
+    "brand": "BloomWear",
+    "price": 38,
+    "rating": 4.8,
+    "stock": 25,
+    "description": "Light and breezy floral print sundress made from 100% breathable cotton. Perfect for summer days.",
+    "image": "https://i.ibb.co.com/b5V4bWdN/9b5c321eb75c4120b34a350e0bf73d5c.png",
+    "category": "Summer Outfits"
+  },
+  {
+    "id": 4,
+    "name": "Linen Shorts",
+    "brand": "CoastalCo",
+    "price": 28,
+    "rating": 4.6,
+    "stock": 30,
+    "description": "Relaxed-fit linen shorts with elastic waistband. Ideal for beach walks and casual summer hangouts.",
+    "image": "https://i.ibb.co.com/hFgP93dw/b814b01c19334870af7f342cd96590e5.png",
+    "category": "Summer Outfits"
+  },
+  {
+    "id": 5,
+    "name": "Striped Oversized Shirt",
+    "brand": "BreezeLine",
+    "price": 32,
+    "rating": 4.4,
+    "stock": 20,
+    "description": "Oversized summer shirt with classic stripes, perfect as a beach cover-up or casual daywear.",
+    "image": "https://i.ibb.co.com/QGJdMn3/47bde0a035c3498d8539a2d8f2a64a8a.png",
+    "category": "Summer Outfits"
+  },
+  {
+    "id": 6,
+    "name": "SPF 50 Sunscreen Lotion",
+    "brand": "GlowGuard",
+    "price": 14,
+    "rating": 4.9,
+    "stock": 60,
+    "description": "Lightweight water-resistant sunscreen with SPF 50. Protects against UVA and UVB rays for up to 8 hours.",
+    "image": "https://i.ibb.co.com/Hp3vd2SZ/2352c8eb4d6948ee8476c7ec97482994.png",
+    "category": "Skincare"
+  },
+  {
+    "id": 7,
+    "name": "Aloe Vera After-Sun Gel",
+    "brand": "CoolCalm",
+    "price": 10,
+    "rating": 4.8,
+    "stock": 50,
+    "description": "Soothing aloe vera gel that cools and repairs sun-exposed skin. Free from parabens and alcohol.",
+    "image": "https://i.ibb.co.com/mCMNYw7R/9d4ae110641945b1b76aea076b9363f2.png",
+    "category": "Skincare"
+  },
+  {
+    "id": 8,
+    "name": "Vitamin C Face Serum",
+    "brand": "LumiSkin",
+    "price": 24,
+    "rating": 4.7,
+    "stock": 35,
+    "description": "Brightening vitamin C serum that evens skin tone and reduces sun spots. Suitable for all skin types.",
+    "image": "https://i.ibb.co.com/bnFc7pd/Gemini-Generated-Image-7mxmra7mxmra7mxm-1.png",
+    "category": "Skincare"
+  },
+  {
+    "id": 9,
+    "name": "Tinted Lip Balm SPF 30",
+    "brand": "PeachKiss",
+    "price": 8,
+    "rating": 4.6,
+    "stock": 80,
+    "description": "Moisturizing tinted lip balm with SPF 30. Keeps lips soft, hydrated, and protected all day long.",
+    "image": "https://i.ibb.co.com/MxR2QxVw/Gemini-Generated-Image-7p1foz7p1foz7p1f-1.png",
+    "category": "Skincare"
+  },
+  {
+    "id": 10,
+    "name": "Inflatable Beach Float",
+    "brand": "WaveRide",
+    "price": 19,
+    "rating": 4.5,
+    "stock": 22,
+    "description": "Giant flamingo-shaped inflatable pool float. Durable PVC material, fits one adult comfortably.",
+    "image": "https://i.ibb.co.com/LzBffCpv/Gemini-Generated-Image-5nz3xb5nz3xb5nz3-1.png",
+    "category": "Beach Accessories"
+  },
+  {
+    "id": 11,
+    "name": "Waterproof Beach Bag",
+    "brand": "ShoreCarry",
+    "price": 27,
+    "rating": 4.7,
+    "stock": 28,
+    "description": "Extra-large waterproof tote bag with multiple pockets. Perfect for carrying beach essentials in style.",
+    "image": "https://i.ibb.co.com/YFVDMKKt/Gemini-Generated-Image-nunebbnunebbnune-1.png",
+    "category": "Beach Accessories"
+  },
+  {
+    "id": 12,
+    "name": "Foldable Beach Umbrella",
+    "brand": "ShadeCraft",
+    "price": 45,
+    "rating": 4.8,
+    "stock": 15,
+    "description": "UV-blocking 7ft beach umbrella with sand anchor. Lightweight, foldable, and easy to carry.",
+    "image": "https://i.ibb.co.com/ycmPf7dw/Gemini-Generated-Image-pr0p9xpr0p9xpr0p-1.png",
+    "category": "Beach Accessories"
+  },
+  {
+    "id": 13,
+    "name": "Anti-Sand Beach Blanket",
+    "brand": "SandFree",
+    "price": 33,
+    "rating": 4.6,
+    "stock": 40,
+    "description": "Oversized sand-resistant beach blanket made from quick-dry microfiber. Fits up to 4 people.",
+    "image": "https://i.ibb.co.com/xS7XhnFz/Gemini-Generated-Image-c62yi5c62yi5c62y-1.png",
+    "category": "Beach Accessories"
+  },
+  {
+    "id": 14,
+    "name": "Waterproof Phone Pouch",
+    "brand": "AquaSafe",
+    "price": 12,
+    "rating": 4.4,
+    "stock": 55,
+    "description": "Universal waterproof phone pouch with IPX8 rating. Keep your phone safe at the beach or pool.",
+    "image": "https://i.ibb.co.com/KpTHjSTr/Gemini-Generated-Image-hiz7hhhiz7hhhiz7-1.png",
+    "category": "Beach Accessories"
+  },
+  {
+    "id": 15,
+    "name": "Straw Sun Hat",
+    "brand": "BrimCo",
+    "price": 17,
+    "rating": 4.9,
+    "stock": 45,
+    "description": "Wide-brim woven straw hat with adjustable inner band. Provides full sun coverage with effortless style.",
+    "image": "https://i.ibb.co.com/nNHVCwLp/Gemini-Generated-Image-q65hstq65hstq65h-1.png",
+    "category": "Accessories"
+  },
+  {
+    "id": 16,
+    "name": "Flip Flops with Arch Support",
+    "brand": "SoleEase",
+    "price": 20,
+    "rating": 4.7,
+    "stock": 38,
+    "description": "Comfortable flip flops with ergonomic arch support and non-slip rubber sole. Built for all-day beach wear.",
+    "image": "https://i.ibb.co.com/xqqGz2jL/Gemini-Generated-Image-1.png",
+    "category": "Footwear"
+  }
+]
