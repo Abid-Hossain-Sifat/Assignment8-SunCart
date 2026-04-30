@@ -5,6 +5,7 @@ const ProductDetailsPage = async ({ params }) => {
   const routeParams = await params
   const productId = Number(routeParams?.id)
 
+  await new Promise((resolve) => setTimeout(resolve, 300))
   const res = await fetch('https://assignment8-sun-cart.vercel.app/Data.json', { cache: 'no-store' })
   const products = await res.json()
   const product = products.find((item) => item.id === productId)
