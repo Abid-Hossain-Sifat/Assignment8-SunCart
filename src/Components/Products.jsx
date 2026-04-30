@@ -47,9 +47,9 @@ const Products = async() => {
               <h3 className='text-xl font-bold text-[#1c2f34] md:text-2xl'>{featuredProduct?.name}</h3>
               <p className='text-2xl font-semibold text-[#218a8a] md:text-3xl'>${featuredProduct?.price}.00</p>
             </div>
-            <p className='mt-2 text-xs text-gray-600 md:text-sm'>{featuredProduct?.description}</p>
-            <button className='mt-5 w-full rounded-xl bg-[#edcf9f] py-3 font-semibold text-[#2e2b25] transition-colors duration-200 hover:bg-[#e5c189]'>
-              Add to Cart
+            <p className='mt-2 text-sm font-medium text-[#3d555b] md:text-base'>Rating: {featuredProduct?.rating}</p>
+            <button className='mt-4 w-full rounded-xl bg-[#edcf9f] py-2.5 font-semibold text-[#2e2b25] transition-colors duration-200 hover:bg-[#e5c189]'>
+              View Details
             </button>
           </div>
 
@@ -58,9 +58,10 @@ const Products = async() => {
             <div key={item.id} className='rounded-2xl bg-[#f4f5f6] p-3 shadow-sm'>
               <img src={item.image} alt={item.name} className='h-[180px] w-full rounded-xl object-cover' />
               <h4 className='mt-3 text-xl font-bold text-[#24363c] md:text-2xl'>{item.name}</h4>
+              <p className='mt-1 text-sm font-medium text-[#3d555b] md:text-base'>Rating: {item.rating}</p>
               <p className='mt-1 text-xl font-semibold text-[#218a8a] md:text-2xl'>${item.price}.00</p>
               <button className='mt-4 w-full rounded-xl border border-[#cae1dd] py-2.5 font-semibold text-[#2d8383] transition-colors duration-200 hover:bg-white'>
-                Quick Add
+                View Details
               </button>
             </div>
           ))}
@@ -74,7 +75,7 @@ const Products = async() => {
                 <p className='mt-2 text-xs text-[#9be0df] md:text-sm'>Looking for more? Explore 15+ more items including beach floats, skincare,<br /> and trendy outfits to complete your collection.</p>
               </div>
               <button className='rounded-full bg-white px-6 py-2.5 text-base font-semibold text-[#176a73] transition-colors duration-200 hover:bg-[#eafafa] md:px-8 md:py-3 md:text-lg'>
-                Get Started
+                See more Products
               </button>
             </div>
           </div>

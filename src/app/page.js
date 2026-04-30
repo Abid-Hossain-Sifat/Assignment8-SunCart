@@ -8,11 +8,11 @@ import Products from "@/Components/Products";
 export default function Home() {
   return (
     <div>
-      <Navbar></Navbar>
+      {/* <Navbar></Navbar>  */}
       <Banner></Banner>
       <Products></Products>
       <Care></Care>
-      <Footer></Footer>
+      {/* <Footer></Footer>  */}
     </div>
   );
 }
