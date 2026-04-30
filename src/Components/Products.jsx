@@ -1,7 +1,6 @@
 import React from 'react'
 import { FaArrowRight } from 'react-icons/fa6';
 import { FaRegHeart } from 'react-icons/fa';
-import Image from 'next/image';
 
 const Products = async() => {
     const res = await fetch ('https://assignment8-sun-cart.vercel.app/Data.json');
@@ -11,20 +10,20 @@ const Products = async() => {
     const sideProducts = sortedByRating?.slice(1, 3) || [];
   return (
     <div>
-      <div className='max-w-[80%] mx-auto mt-15 mb-10'>
+      <div className='max-w-[80%] mx-auto mt-12 mb-10 md:mt-14 lg:mt-15'>
         {/* heading  */}
-        <div className='flex justify-between items-center'>
+        <div className='flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between'>
             <div>
-                <h1 className='text-2xl font-bold text-gray-900'>
+                <h1 className='text-xl font-bold text-gray-900 md:text-2xl'>
                     Popular Products
                 </h1>
-                <p className='text-gray-700 mt-2'>
+                <p className='text-sm text-gray-700 mt-2 md:text-base'>
                     Our community's most love pieces for a coastal lifestyle.
                 </p>
             </div>
             <div>
                 <p>
-                    <a  className='flex gap-3 items-center' href="">
+                    <a  className='flex gap-2.5 items-center text-sm md:text-base' href="">
                         View All <span><FaArrowRight></FaArrowRight></span>
                     </a>
                 </p>
@@ -44,11 +43,11 @@ const Products = async() => {
                 <FaRegHeart />
               </button>
             </div>
-            <div className='mt-4 flex items-center justify-between'>
-              <h3 className='text-2xl font-bold text-[#1c2f34]'>{featuredProduct?.name}</h3>
-              <p className='text-3xl font-semibold text-[#218a8a]'>${featuredProduct?.price}.00</p>
+            <div className='mt-4 flex items-start justify-between gap-3'>
+              <h3 className='text-xl font-bold text-[#1c2f34] md:text-2xl'>{featuredProduct?.name}</h3>
+              <p className='text-2xl font-semibold text-[#218a8a] md:text-3xl'>${featuredProduct?.price}.00</p>
             </div>
-            <p className='mt-2 text-sm text-gray-600'>{featuredProduct?.description}</p>
+            <p className='mt-2 text-xs text-gray-600 md:text-sm'>{featuredProduct?.description}</p>
             <button className='mt-5 w-full rounded-xl bg-[#edcf9f] py-3 font-semibold text-[#2e2b25] transition-colors duration-200 hover:bg-[#e5c189]'>
               Add to Cart
             </button>
@@ -58,8 +57,8 @@ const Products = async() => {
           {sideProducts.map((item) => (
             <div key={item.id} className='rounded-2xl bg-[#f4f5f6] p-3 shadow-sm'>
               <img src={item.image} alt={item.name} className='h-[180px] w-full rounded-xl object-cover' />
-              <h4 className='mt-3 text-2xl font-bold text-[#24363c]'>{item.name}</h4>
-              <p className='mt-1 text-2xl font-semibold text-[#218a8a]'>${item.price}.00</p>
+              <h4 className='mt-3 text-xl font-bold text-[#24363c] md:text-2xl'>{item.name}</h4>
+              <p className='mt-1 text-xl font-semibold text-[#218a8a] md:text-2xl'>${item.price}.00</p>
               <button className='mt-4 w-full rounded-xl border border-[#cae1dd] py-2.5 font-semibold text-[#2d8383] transition-colors duration-200 hover:bg-white'>
                 Quick Add
               </button>
@@ -68,13 +67,13 @@ const Products = async() => {
 
 
           {/* See more Card  */}
-          <div className='rounded-2xl bg-gradient-to-r from-[#0c757a] to-[#0d6672] p-6 text-white shadow-sm lg:col-span-2'>
-            <div className='flex items-center justify-between gap-6'>
+          <div className='group rounded-2xl bg-gradient-to-r from-[#0c757a] to-[#0d6672] p-5 text-white shadow-sm transition-colors duration-300 hover:from-[#0f8489] hover:to-[#0f707d] md:p-6 lg:col-span-2'>
+            <div className='flex flex-col items-start justify-between gap-4 md:flex-row md:items-center md:gap-6'>
               <div>
-                <h3 className='text-4xl font-bold'>Discover More Summer Essentials</h3>
-                <p className='mt-2 text-sm text-[#9be0df]'>Looking for more? Explore 15+ more items including beach floats, skincare,<br /> and trendy outfits to complete your collection.</p>
+                <h3 className='text-2xl font-bold md:text-3xl lg:text-4xl'>Discover More Summer Essentials</h3>
+                <p className='mt-2 text-xs text-[#9be0df] md:text-sm'>Looking for more? Explore 15+ more items including beach floats, skincare,<br /> and trendy outfits to complete your collection.</p>
               </div>
-              <button className='rounded-full bg-white px-8 py-3 text-lg font-semibold text-[#176a73] transition-colors duration-200 hover:bg-[#eafafa]'>
+              <button className='rounded-full bg-white px-6 py-2.5 text-base font-semibold text-[#176a73] transition-colors duration-200 hover:bg-[#eafafa] md:px-8 md:py-3 md:text-lg'>
                 Get Started
               </button>
             </div>
