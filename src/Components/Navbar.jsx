@@ -8,11 +8,13 @@ const Navbar = () => {
   return (
     <div>
       <div className='max-w-[80%] mx-auto flex justify-between p-5 items-center'>
-        <div className='flex gap-1 text-[#008080] items-center'>
+        <div>
+          <a href="/" className='flex gap-1 text-[#008080] items-center'>
           <ShoppingBag className='h-7.5 w-7.5'></ShoppingBag>
           <h1 className='text-3xl font-extrabold'>
             SunCart
           </h1>
+          </a>
         </div>
         <div className='flex gap-15 text-[#566375]'>
           <Link href="/">Home</Link>

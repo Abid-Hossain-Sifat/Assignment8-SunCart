@@ -8,10 +8,10 @@ import { FaGithub } from 'react-icons/fa'
 const Footer = () => {
   return (
     <footer className='bg-[#f5fafa] py-12 md:py-16'>
-      <div className='max-w-[80%] mx-auto'>
-        <div className='flex justify-between items-start'>
+      <div className='mx-auto max-w-[90%] md:max-w-[85%] lg:max-w-[80%]'>
+        <div className='grid grid-cols-1 gap-10 text-center sm:grid-cols-2 sm:text-left lg:flex lg:items-start lg:justify-between'>
 
-        <div className='mx-auto max-w-md md:mx-0'>
+        <div className='mx-auto max-w-md sm:col-span-2 md:mx-0 lg:mx-0 lg:max-w-md'>
           
           <h1 className='mx-auto flex w-fit items-center gap-4 text-3xl font-extrabold leading-none text-[#008080] md:mx-0'>
             <div className='relative flex items-center justify-center group'>
@@ -31,39 +31,39 @@ const Footer = () => {
         </div>
 
 
-        <div className='md:justify-self-start'>
+        <div className='sm:justify-self-start'>
           <h4 className='text-[24px] font-semibold text-gray-900'>
             Shop
           </h4>
           <ul className='mt-5 space-y-2.5 leading-relaxed text-gray-700'>
             <li>
-              <a href="" className="group relative inline-flex items-center pl-0 transition-all duration-300 hover:pl-3 hover:text-[#008080]">
-                <span className="absolute left-0 top-1/2 -translate-y-1/2 text-xl font-semibold leading-none opacity-0 transition-all duration-300 group-hover:opacity-100">-</span>
-                <span>
+              <a href="" className="group relative inline-flex items-center pl-0 transition-all duration-300 hover:text-[#008080]">
+                <span className="absolute -left-3 top-1/2 -translate-y-1/2 text-xl font-semibold leading-none opacity-0 transition-all duration-300 group-hover:opacity-100">-</span>
+                <span className='transition-transform duration-300 group-hover:translate-x-1'>
                 All Collections
                 </span>
               </a>
             </li>
             <li>
-              <a href="" className="group relative inline-flex items-center pl-0 transition-all duration-300 hover:pl-3 hover:text-[#008080]">
-                <span className="absolute left-0 top-1/2 -translate-y-1/2 text-xl font-semibold leading-none opacity-0 transition-all duration-300 group-hover:opacity-100">-</span>
-                <span>
+              <a href="" className="group relative inline-flex items-center pl-0 transition-all duration-300 hover:text-[#008080]">
+                <span className="absolute -left-3 top-1/2 -translate-y-1/2 text-xl font-semibold leading-none opacity-0 transition-all duration-300 group-hover:opacity-100">-</span>
+                <span className='transition-transform duration-300 group-hover:translate-x-1'>
                 Artisan Frames
                 </span>
               </a>
             </li>
             <li>
-              <a href="" className="group relative inline-flex items-center pl-0 transition-all duration-300 hover:pl-3 hover:text-[#008080]">
-                <span className="absolute left-0 top-1/2 -translate-y-1/2 text-xl font-semibold leading-none opacity-0 transition-all duration-300 group-hover:opacity-100">-</span>
-                <span>
+              <a href="" className="group relative inline-flex items-center pl-0 transition-all duration-300 hover:text-[#008080]">
+                <span className="absolute -left-3 top-1/2 -translate-y-1/2 text-xl font-semibold leading-none opacity-0 transition-all duration-300 group-hover:opacity-100">-</span>
+                <span className='transition-transform duration-300 group-hover:translate-x-1'>
                 Summer Skincare
                 </span>
               </a>
             </li>
             <li>
-              <a href="" className="group relative inline-flex items-center pl-0 transition-all duration-300 hover:pl-3 hover:text-[#008080]">
-                <span className="absolute left-0 top-1/2 -translate-y-1/2 text-xl font-semibold leading-none opacity-0 transition-all duration-300 group-hover:opacity-100">-</span>
-                <span>
+              <a href="" className="group relative inline-flex items-center pl-0 transition-all duration-300 hover:text-[#008080]">
+                <span className="absolute -left-3 top-1/2 -translate-y-1/2 text-xl font-semibold leading-none opacity-0 transition-all duration-300 group-hover:opacity-100">-</span>
+                <span className='transition-transform duration-300 group-hover:translate-x-1'>
                 Beach Totes
                 </span>
               </a>
@@ -72,39 +72,39 @@ const Footer = () => {
         </div>
 
 
-        <div className='md:justify-self-start'>
+        <div className='sm:justify-self-start'>
           <h4 className='text-[24px] font-semibold text-gray-900'>
             Company
           </h4>
           <ul className='mt-5 space-y-2.5 leading-relaxed text-gray-700'>
             <li>
-              <a href="" className="group relative inline-flex items-center pl-0 transition-all duration-300 hover:pl-3 hover:text-[#008080]">
-                <span className="absolute left-0 top-1/2 -translate-y-1/2 text-xl font-semibold leading-none opacity-0 transition-all duration-300 group-hover:opacity-100">-</span>
-                <span>
+              <a href="" className="group relative inline-flex items-center pl-0 transition-all duration-300 hover:text-[#008080]">
+                <span className="absolute -left-3 top-1/2 -translate-y-1/2 text-xl font-semibold leading-none opacity-0 transition-all duration-300 group-hover:opacity-100">-</span>
+                <span className='transition-transform duration-300 group-hover:translate-x-1'>
                 About Us
                 </span>
               </a>
             </li>
             <li>
-              <a href="" className="group relative inline-flex items-center pl-0 transition-all duration-300 hover:pl-3 hover:text-[#008080]">
-                <span className="absolute left-0 top-1/2 -translate-y-1/2 text-xl font-semibold leading-none opacity-0 transition-all duration-300 group-hover:opacity-100">-</span>
-                <span>
+              <a href="" className="group relative inline-flex items-center pl-0 transition-all duration-300 hover:text-[#008080]">
+                <span className="absolute -left-3 top-1/2 -translate-y-1/2 text-xl font-semibold leading-none opacity-0 transition-all duration-300 group-hover:opacity-100">-</span>
+                <span className='transition-transform duration-300 group-hover:translate-x-1'>
                 Shipping Policy
                 </span>
               </a>
             </li>
             <li>
-              <a href="" className="group relative inline-flex items-center pl-0 transition-all duration-300 hover:pl-3 hover:text-[#008080]">
-                <span className="absolute left-0 top-1/2 -translate-y-1/2 text-xl font-semibold leading-none opacity-0 transition-all duration-300 group-hover:opacity-100">-</span>
-                <span>
+              <a href="" className="group relative inline-flex items-center pl-0 transition-all duration-300 hover:text-[#008080]">
+                <span className="absolute -left-3 top-1/2 -translate-y-1/2 text-xl font-semibold leading-none opacity-0 transition-all duration-300 group-hover:opacity-100">-</span>
+                <span className='transition-transform duration-300 group-hover:translate-x-1'>
                 Returns
                 </span>
               </a>
             </li>
             <li>
-              <a href="" className="group relative inline-flex items-center pl-0 transition-all duration-300 hover:pl-3 hover:text-[#008080]">
-                <span className="absolute left-0 top-1/2 -translate-y-1/2 text-xl font-semibold leading-none opacity-0 transition-all duration-300 group-hover:opacity-100">-</span>
-                <span>
+              <a href="" className="group relative inline-flex items-center pl-0 transition-all duration-300 hover:text-[#008080]">
+                <span className="absolute -left-3 top-1/2 -translate-y-1/2 text-xl font-semibold leading-none opacity-0 transition-all duration-300 group-hover:opacity-100">-</span>
+                <span className='transition-transform duration-300 group-hover:translate-x-1'>
                 Contact Us
                 </span>
               </a>
@@ -112,7 +112,7 @@ const Footer = () => {
           </ul>
         </div>
 
-        <div className='md:justify-self-start'>
+        <div className='sm:justify-self-start'>
           <h4 className='text-[24px] font-semibold text-gray-900'>Social Link</h4>
           <div className="mt-5 flex items-center justify-center gap-4 text-[28px] text-gray-700 md:justify-start">
           {/* Facebook */}
