@@ -1,107 +1,158 @@
 import React from 'react'
+import { ShoppingBag } from 'lucide-react'
+import { FaFacebook } from 'react-icons/fa'
+import { FaInstagram } from 'react-icons/fa'
+import { FaLinkedin } from 'react-icons/fa'
+import { FaGithub } from 'react-icons/fa'
 
 const Footer = () => {
   return (
-    <div className='bg-[#f5fafa] py-15'>
-      <div className='max-w-[80%] mx-auto flex justify-between items-center'>
+    <footer className='bg-[#f5fafa] py-12 md:py-16'>
+      <div className='max-w-[80%] mx-auto'>
+        <div className='flex justify-between items-start'>
 
-        <div>
-          <h1>
-            SunCart
+        <div className='mx-auto max-w-md md:mx-0'>
+          
+          <h1 className='mx-auto flex w-fit items-center gap-4 text-3xl font-extrabold leading-none text-[#008080] md:mx-0'>
+            <div className='relative flex items-center justify-center group'>
+              <span className='relative z-10 bg-[#008080] p-2.5 rounded-2xl flex items-center justify-center shadow-lg'>
+                <ShoppingBag className='h-7 w-7 text-white' strokeWidth={1.5}></ShoppingBag>
+              </span>
+              <div className='absolute inset-0 bg-[#008080] rounded-full blur-xl opacity-30 -z-10'></div>
+            </div>
+            <span className='tracking-tight'>
+              SunCart
+            </span>
           </h1>
-          <p>
+          
+          <p className='mt-6 text-[16px] leading-relaxed text-gray-700 md:text-[17px]'>
             Elevate your summer with SunCart. Explore our <br></br> curated collection of seasonal  outfits, skincare,<br></br> and accessories. Experience a modern way to <br></br>browse, authenticate, and shop for your ultimate<br></br> sun-ready essentials.
           </p>
         </div>
 
 
-        <div>
-          <h4>Shop</h4>
-          <ul>
+        <div className='md:justify-self-start'>
+          <h4 className='text-[24px] font-semibold text-gray-900'>
+            Shop
+          </h4>
+          <ul className='mt-5 space-y-2.5 leading-relaxed text-gray-700'>
             <li>
-              <a href="">
+              <a href="" className="group relative inline-flex items-center pl-0 transition-all duration-300 hover:pl-3 hover:text-[#008080]">
+                <span className="absolute left-0 top-1/2 -translate-y-1/2 text-xl font-semibold leading-none opacity-0 transition-all duration-300 group-hover:opacity-100">-</span>
+                <span>
                 All Collections
+                </span>
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="" className="group relative inline-flex items-center pl-0 transition-all duration-300 hover:pl-3 hover:text-[#008080]">
+                <span className="absolute left-0 top-1/2 -translate-y-1/2 text-xl font-semibold leading-none opacity-0 transition-all duration-300 group-hover:opacity-100">-</span>
+                <span>
                 Artisan Frames
+                </span>
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="" className="group relative inline-flex items-center pl-0 transition-all duration-300 hover:pl-3 hover:text-[#008080]">
+                <span className="absolute left-0 top-1/2 -translate-y-1/2 text-xl font-semibold leading-none opacity-0 transition-all duration-300 group-hover:opacity-100">-</span>
+                <span>
                 Summer Skincare
+                </span>
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="" className="group relative inline-flex items-center pl-0 transition-all duration-300 hover:pl-3 hover:text-[#008080]">
+                <span className="absolute left-0 top-1/2 -translate-y-1/2 text-xl font-semibold leading-none opacity-0 transition-all duration-300 group-hover:opacity-100">-</span>
+                <span>
                 Beach Totes
+                </span>
               </a>
             </li>
           </ul>
         </div>
 
 
-        <div>
-          <h4>Company</h4>
-          <ul>
+        <div className='md:justify-self-start'>
+          <h4 className='text-[24px] font-semibold text-gray-900'>
+            Company
+          </h4>
+          <ul className='mt-5 space-y-2.5 leading-relaxed text-gray-700'>
             <li>
-              <a href="">
+              <a href="" className="group relative inline-flex items-center pl-0 transition-all duration-300 hover:pl-3 hover:text-[#008080]">
+                <span className="absolute left-0 top-1/2 -translate-y-1/2 text-xl font-semibold leading-none opacity-0 transition-all duration-300 group-hover:opacity-100">-</span>
+                <span>
                 About Us
+                </span>
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="" className="group relative inline-flex items-center pl-0 transition-all duration-300 hover:pl-3 hover:text-[#008080]">
+                <span className="absolute left-0 top-1/2 -translate-y-1/2 text-xl font-semibold leading-none opacity-0 transition-all duration-300 group-hover:opacity-100">-</span>
+                <span>
                 Shipping Policy
+                </span>
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="" className="group relative inline-flex items-center pl-0 transition-all duration-300 hover:pl-3 hover:text-[#008080]">
+                <span className="absolute left-0 top-1/2 -translate-y-1/2 text-xl font-semibold leading-none opacity-0 transition-all duration-300 group-hover:opacity-100">-</span>
+                <span>
                 Returns
+                </span>
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="" className="group relative inline-flex items-center pl-0 transition-all duration-300 hover:pl-3 hover:text-[#008080]">
+                <span className="absolute left-0 top-1/2 -translate-y-1/2 text-xl font-semibold leading-none opacity-0 transition-all duration-300 group-hover:opacity-100">-</span>
+                <span>
                 Contact Us
+                </span>
               </a>
             </li>
           </ul>
         </div>
 
-        <div className='text-center'>
-          <h4>Social Link</h4>
-          <div className="flex gap-3 items-center">
+        <div className='md:justify-self-start'>
+          <h4 className='text-[24px] font-semibold text-gray-900'>Social Link</h4>
+          <div className="mt-5 flex items-center justify-center gap-4 text-[28px] text-gray-700 md:justify-start">
           {/* Facebook */}
-          <a href="#" className="hover:text-[#1877F2] transition-colors">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path>
-            </svg>
+          <a href="https://www.facebook.com/share/1E5ZMLxiUb/" target='_blank' rel='noopener noreferrer' className='rounded-md p-1 transition-colors duration-200 hover:text-[#1877F2]'>
+            <FaFacebook></FaFacebook>
           </a>
-
       {/* Instagram */}
-          <a href="#" className="hover:text-[#E4405F] transition-colors">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.266.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.791 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path>
-              </svg>
+          <a href="https://www.instagram.com/cod3x_who?igsh=YnA4bG03NGRjdjE3" target='_blank' rel='noopener noreferrer' className='rounded-md p-1 transition-colors duration-200 hover:text-[#E4405F]'>
+            <FaInstagram></FaInstagram>
           </a>
 
       {/* LinkedIn */}
-          <a href="#" className="hover:text-[#0A66C2] transition-colors">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path>
-            </svg>
+          <a href="https://www.linkedin.com/in/abid-hossain-sifat" target='_blank' rel='noopener noreferrer' className='rounded-md p-1 transition-colors duration-200 hover:text-[#0A66C2]'>
+            <FaLinkedin></FaLinkedin>
           </a>
 
       {/* GitHub */}
-      <a href="#" className="hover:text-[#333] transition-colors">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path>
-        </svg>
+      <a href="https://github.com/Abid-Hossain-Sifat" target='_blank' rel='noopener noreferrer' className='rounded-md p-1 transition-colors duration-200 hover:text-[#171515]'>
+        <FaGithub></FaGithub>
       </a>
           </div>
         </div>
+        </div>
+        <div className='h-0.5 bg-[#008080]/50 mt-10'></div>
+
+      <div className='flex flex-col md:flex-row justify-between items-center gap-4 md:gap-0 text-gray-700 mt-6 md:mt-7.5 text-sm md:text-base text-center md:text-left'>
+        <p className='order-2 md:order-1'>
+          © 2026 KeenKeeper. All rights reserved.
+        </p>
+        <ol className='order-1 md:order-2 flex flex-wrap justify-center gap-5 md:gap-10 items-center'>
+          <li>Privacy Policy</li>
+          <li>Terms of Service</li>
+          <li>Cookies</li>
+        </ol>
       </div>
-    </div>
+      </div>
+      
+      
+
+    </footer>
   )
 }
 
