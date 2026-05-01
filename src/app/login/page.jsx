@@ -1,12 +1,46 @@
+"use client";
+
 import React from 'react';
 import Link from 'next/link';
 import { FcGoogle } from 'react-icons/fc';
+import { authClient } from '@/lib/auth-client';
+import { toast } from 'react-toastify';
+import { useRouter } from 'next/navigation';
 
 const LoginPage = () => {
+
+  const router = useRouter();
+
+  const onSubmit = async (e) => {
+      e.preventDefault();
+  
+      const formData = new FormData(e.target);
+      const email = formData.get("email");
+      const password = formData.get("password");
+  
+      try {
+        const { data, error } = await authClient.signIn.email({
+          email,
+          password,
+        });
+        
+        if (error) {
+          toast.error(error.message || "Invalid credentials");
+        } else {
+          toast.success("Logged in successfully!");
+          setTimeout(() => {
+            router.push('/');
+          }, 1000);
+        }
+      } catch (err) {
+        toast.error(err.message || "Something went wrong!");
+      }
+    }
+
   return (
     <div className="flex min-h-screen items-center justify-center bg-gradient-to-br from-[#f8f9fa] to-[#e6ecec] p-4">
       <div className="w-full max-w-md rounded-3xl bg-white/80 p-8 shadow-xl backdrop-blur-md sm:p-10">
-        
+
         {/* Logo */}
         <div className="mb-6 text-center">
           <h1 className="text-3xl font-extrabold text-[#007d7d]">SunCart</h1>
@@ -22,7 +56,7 @@ const LoginPage = () => {
         </div>
 
         {/* Form */}
-        <form className="space-y-5">
+        <form className="space-y-5" onSubmit={onSubmit}>
           {/* Email */}
           <div>
             <label className="mb-1.5 block text-xs font-bold tracking-wider text-[#8b7355] uppercase">
@@ -30,7 +64,8 @@ const LoginPage = () => {
             </label>
             <input
               type="email"
-              placeholder="Enter your Gmail"
+              name="email"
+              placeholder="Enter your Email"
               className="w-full rounded-xl bg-[#f4f5f6] px-4 py-3.5 text-sm text-gray-800 outline-none transition-all focus:bg-white focus:ring-2 focus:ring-[#007d7d]/20"
             />
           </div>
@@ -47,6 +82,7 @@ const LoginPage = () => {
             </div>
             <input
               type="password"
+              name="password"
               placeholder="••••••••"
               className="w-full rounded-xl bg-[#f4f5f6] px-4 py-3.5 text-sm text-gray-800 outline-none transition-all focus:bg-white focus:ring-2 focus:ring-[#007d7d]/20"
             />
@@ -61,12 +97,12 @@ const LoginPage = () => {
           </button>
         </form>
 
-        {/* 2nd part  */}
+        {/* Divider */}
         <div className="my-8 flex items-center">
           <div className="flex-1 border-t border-gray-200"></div>
-          <p className="px-4 text-[10px] font-semibold text-gray-400 uppercase tracking-widest">
+          <span className="px-4 text-[10px] font-semibold text-gray-400 uppercase tracking-widest">
             Or continue with
-          </p>
+          </span>
           <div className="flex-1 border-t border-gray-200"></div>
         </div>
 

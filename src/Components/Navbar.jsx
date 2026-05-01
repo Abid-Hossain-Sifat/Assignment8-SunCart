@@ -56,15 +56,15 @@ const Navbar = () => {
           </Link>
 
           <Link href="/signup">
-            <button className="group flex items-center gap-2 bg-white rounded-full border border-gray-200 py-1.5 px-4 shadow-sm cursor-pointer transition-all duration-300 hover:shadow-md hover:border-[#0f766e]">
+            <button className='group flex items-center gap-2 bg-white rounded-full border border-gray-200 py-1.5 px-4 shadow-sm cursor-pointer transition-all duration-300 hover:shadow-md hover:border-[#0f766e]'>
 
-              <p className="text-gray-800 font-medium group-hover:text-[#0f766e] transition-colors">
+              <p className='text-gray-800 font-medium group-hover:text-[#0f766e] transition-colors'>
                 Register
               </p>
 
-              <span className="bg-[#0f766e] rounded-full p-2 flex items-center justify-center 
+              <span className='bg-[#0f766e] rounded-full p-2 flex items-center justify-center 
                  transition-all duration-300 
-                 group-hover:scale-110 group-hover:rotate-12">
+                 group-hover:scale-110 group-hover:rotate-12'>
                 <UserPlus className="h-4 w-4 text-white" />
               </span>
 
