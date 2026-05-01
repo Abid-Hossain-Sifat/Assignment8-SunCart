@@ -144,17 +144,17 @@ const Footer = () => {
         </p>
         <ol className='order-1 md:order-2 flex flex-wrap justify-center gap-5 md:gap-10 items-center'>
           <li>
-            <a href="">
+            <a href="#" className="transition-colors duration-300 hover:text-[#008080]">
               Privacy Policy
             </a>
           </li>
           <li>
-            <a href="">
+            <a href="#" className="transition-colors duration-300 hover:text-[#008080]">
               Terms of Service
             </a>
           </li>
           <li>
-            <a href="">
+            <a href="#" className="transition-colors duration-300 hover:text-[#008080]">
               Cookies
             </a>
           </li>

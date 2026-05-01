@@ -2,11 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 
 const toSlug = (value) =>
-  value
-    .toLowerCase()
-    .replace(/&/g, 'and')
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/^-|-$/g, '')
+  value.toLowerCase().replace(/&/g, 'and').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
 
 const ProductsByFilterPage = async ({ params }) => {
   const routeParams = await params
