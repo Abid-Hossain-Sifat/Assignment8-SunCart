@@ -2,10 +2,18 @@
 import React from 'react'
 import { ShoppingBag, User, UserPlus, LogOut } from 'lucide-react'
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
+import { authClient } from '@/lib/auth-client'
 
 const Navbar = () => {
   const pathname = usePathname()
+  const router = useRouter()
+  const { data: session, isPending } = authClient.useSession()
+
+  const handleLogout = async () => {
+    await authClient.signOut();
+    router.push('/login');
+  }
 
   const isActive = (path) => {
     if (path === '/' && pathname === '/') return true;
@@ -40,49 +48,57 @@ const Navbar = () => {
             </Link>
           ))}
         </div>
-        <div className='flex gap-5'>
-          <Link href="/login">
-            <button className="group flex items-center gap-2 bg-white rounded-full border border-gray-200 py-1.5 px-4 shadow-sm cursor-pointer transition-all duration-300 hover:shadow-md hover:border-[#4F39F6]">
+        <div className='flex gap-5 items-center'>
+          {isPending ? (
+            <div className="flex gap-4 items-center">
+               <div className="w-24 h-10 bg-gray-200 rounded-full animate-pulse"></div>
+               <div className="w-24 h-10 bg-gray-200 rounded-full animate-pulse"></div>
+            </div>
+          ) : session ? (
+            <div className="flex items-center gap-4">
+              <div className="h-10 w-10 overflow-hidden rounded-full border-2 border-[#008080] shadow-sm">
+                {session.user.image ? (
+                  <img src={session.user.image} alt={session.user.name} className="h-full w-full object-cover" />
+                ) : (
+                  <div className="flex h-full w-full items-center justify-center bg-[#008080] text-lg font-bold text-white uppercase">
+                    {session.user.name?.charAt(0) || 'U'}
+                  </div>
+                )}
+              </div>
+              <button onClick={handleLogout} className="group flex items-center gap-2 bg-white rounded-full border border-gray-200 py-1.5 px-4 shadow-sm cursor-pointer transition-all duration-300 hover:shadow-md hover:border-red-500">
+                <span className="text-gray-800 font-medium group-hover:text-red-500 transition-colors">
+                  Logout
+                </span>
+                <span className="bg-red-500 rounded-full p-2 flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:rotate-12">
+                  <LogOut className="h-4 w-4 text-white" />
+                </span>
+              </button>
+            </div>
+          ) : (
+            <>
+              <Link href="/login">
+                <button className="group flex items-center gap-2 bg-white rounded-full border border-gray-200 py-1.5 px-4 shadow-sm cursor-pointer transition-all duration-300 hover:shadow-md hover:border-[#4F39F6]">
+                  <span className="text-gray-800 font-medium group-hover:text-[#4F39F6] transition-colors">
+                    Login
+                  </span>
+                  <span className="bg-gradient-to-br from-[#9514FA] to-[#4F39F6] rounded-full p-2 flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:rotate-12 shadow-lg shadow-indigo-200">
+                    <User className="h-4 w-4 text-white" />
+                  </span>
+                </button>
+              </Link>
 
-              <span className="text-gray-800 font-medium group-hover:text-[#4F39F6] transition-colors">
-                Login
-              </span>
-
-              <span className="bg-gradient-to-br from-[#9514FA] to-[#4F39F6] rounded-full p-2 flex items-center justify-center  transition-all duration-300 group-hover:scale-110 group-hover:rotate-12 shadow-lg shadow-indigo-200">
-                <User className="h-4 w-4 text-white" />
-              </span>
-
-            </button>
-          </Link>
-
-          <Link href="/signup">
-            <button className='group flex items-center gap-2 bg-white rounded-full border border-gray-200 py-1.5 px-4 shadow-sm cursor-pointer transition-all duration-300 hover:shadow-md hover:border-[#0f766e]'>
-
-              <p className='text-gray-800 font-medium group-hover:text-[#0f766e] transition-colors'>
-                Register
-              </p>
-
-              <span className='bg-[#0f766e] rounded-full p-2 flex items-center justify-center 
-                 transition-all duration-300 
-                 group-hover:scale-110 group-hover:rotate-12'>
-                <UserPlus className="h-4 w-4 text-white" />
-              </span>
-
-            </button>
-          </Link>
-
-
-          {/* <button className="group flex items-center gap-2 bg-white rounded-full border     border-gray-200 py-1.5 px-4 shadow-sm cursor-pointer transition-all duration-300 hover:shadow-md hover:border-red-500">
-
-            <span className="text-gray-800 font-medium group-hover:text-red-500 transition-colors">
-              Logout
-            </span>
-
-            <span className="bg-red-500 rounded-full p-2 flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:rotate-12">
-              <LogOut className="h-4 w-4 text-white" />
-            </span>
-
-          </button> */}
+              <Link href="/signup">
+                <button className='group flex items-center gap-2 bg-white rounded-full border border-gray-200 py-1.5 px-4 shadow-sm cursor-pointer transition-all duration-300 hover:shadow-md hover:border-[#0f766e]'>
+                  <p className='text-gray-800 font-medium group-hover:text-[#0f766e] transition-colors'>
+                    Register
+                  </p>
+                  <span className='bg-[#0f766e] rounded-full p-2 flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:rotate-12'>
+                    <UserPlus className="h-4 w-4 text-white" />
+                  </span>
+                </button>
+              </Link>
+            </>
+          )}
         </div>
       </div>
     </div>

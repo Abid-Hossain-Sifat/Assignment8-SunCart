@@ -23,7 +23,7 @@ const Products = async() => {
             </div>
             <div>
                 <p>
-                    <a className='group flex gap-2.5 items-center text-sm md:text-base transition-colors duration-300 hover:text-[#008080]' href="">
+                    <a className='group flex gap-2.5 items-center text-sm md:text-base transition-colors duration-300 hover:text-[#008080]' href="#">
                         View All <span className='transition-transform duration-300 group-hover:translate-x-1.5'><FaArrowRight></FaArrowRight></span>
                     </a>
                 </p>
