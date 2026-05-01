@@ -33,7 +33,7 @@ const SignupPage = () => {
       toast.error(error.message || "An error occurred during signup");
     } else {
       toast.success("Account created successfully!");
-      router.push('/');
+      router.push('/login');
     }
   }
   return (
