@@ -140,12 +140,24 @@ const Footer = () => {
 
       <div className='flex flex-col md:flex-row justify-between items-center gap-4 md:gap-0 text-gray-700 mt-6 md:mt-7.5 text-sm md:text-base text-center md:text-left'>
         <p className='order-2 md:order-1'>
-          © 2026 KeenKeeper. All rights reserved.
+          © 2026 SunCart. All rights reserved.❤️ make with love. build by Abid Hossain Sifat
         </p>
         <ol className='order-1 md:order-2 flex flex-wrap justify-center gap-5 md:gap-10 items-center'>
-          <li>Privacy Policy</li>
-          <li>Terms of Service</li>
-          <li>Cookies</li>
+          <li>
+            <a href="">
+              Privacy Policy
+            </a>
+          </li>
+          <li>
+            <a href="">
+              Terms of Service
+            </a>
+          </li>
+          <li>
+            <a href="">
+              Cookies
+            </a>
+          </li>
         </ol>
       </div>
       </div>
