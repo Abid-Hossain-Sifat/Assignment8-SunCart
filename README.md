@@ -98,6 +98,107 @@ The goal of this project is to build a **full-stack modern eCommerce UI experien
 - Environment variables for secure config
 - Smooth navigation with Next.js App Router
 - Toast notifications for feedback
+
+---
+
+## 📁 Project File Structure
+
+```
+sun-cart/
+├── AGENTS.md
+├── CLAUDE.md
+├── eslint.config.mjs
+├── jsconfig.json
+├── next.config.mjs
+├── package.json
+├── postcss.config.mjs
+├── README.md
+├── public/
+│   ├── Data.json
+│   └── Assets/
+├── src/
+│   ├── app/
+│   │   ├── globals.css
+│   │   ├── layout.js
+│   │   ├── loading.jsx
+│   │   ├── page.js
+│   │   ├── api/
+│   │   │   └── auth/
+│   │   │       └── [...all]/
+│   │   │           └── route.js
+│   │   ├── login/
+│   │   │   └── page.jsx
+│   │   ├── my-profile/
+│   │   │   ├── page.jsx
+│   │   │   └── [update-profile]/
+│   │   │       └── page.jsx
+│   │   ├── products/
+│   │   │   ├── layout.jsx
+│   │   │   ├── page.jsx
+│   │   │   ├── [category]/
+│   │   │   │   └── [price]/
+│   │   │   │       └── page.jsx
+│   │   │   └── product/
+│   │   │       └── [id]/
+│   │   │           ├── loading.jsx
+│   │   │           └── page.jsx
+│   │   └── signup/
+│   │       └── page.jsx
+│   ├── Components/
+│   │   ├── Banner.jsx
+│   │   ├── Brands.jsx
+│   │   ├── Care.jsx
+│   │   ├── Footer.jsx
+│   │   ├── Navbar.jsx
+│   │   ├── Products.jsx
+│   │   └── Toastify.jsx
+│   └── lib/
+│       ├── auth-client.js
+│       ├── auth.js
+│       └── db.js
+```
+
+---
+
+## 📝 File Descriptions
+
+### 🔧 Root Configuration Files
+- `next.config.mjs` – Next.js configuration
+- `eslint.config.mjs` – ESLint rules
+- `jsconfig.json` – JavaScript/Path aliases
+- `postcss.config.mjs` – CSS processing
+- `package.json` – Project dependencies
+
+### 📂 Public Directory
+- `Data.json` – Product data (JSON format)
+- `Assets/` – Static images and media files
+
+### 🎨 App Directory (`src/app/`)
+- `layout.js` – Root layout wrapper
+- `page.js` – Home page
+- `globals.css` – Global styles
+- `loading.jsx` – Loading skeleton/spinner
+- **API Routes** (`api/auth/[...all]/`) – BetterAuth endpoints
+- **Pages:**
+  - `login/` – Login page
+  - `signup/` – Sign up page
+  - `my-profile/` – User profile page
+  - `products/` – Products listing & filtering by category/price
+  - `products/product/[id]/` – Individual product details (protected)
+
+### 🧩 Components (`src/Components/`)
+- `Navbar.jsx` – Header navigation
+- `Banner.jsx` – Hero/promotional banners
+- `Products.jsx` – Product grid component
+- `Brands.jsx` – Brand showcase
+- `Care.jsx` – Care/tips section
+- `Footer.jsx` – Footer component
+- `Toastify.jsx` – Toast notification setup
+
+### 📚 Library (`src/lib/`)
+- `auth.js` – BetterAuth server-side configuration
+- `auth-client.js` – BetterAuth client-side setup
+- `db.js` – Database configuration
 - Clean UI with Tailwind CSS + DaisyUI
 - Custom loading states (optional)
 - 404 Not Found page
