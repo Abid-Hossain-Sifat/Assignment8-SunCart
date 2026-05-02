@@ -90,8 +90,10 @@ const ProductsByFilterPage = async ({ params }) => {
 
         <div className='mt-6 grid grid-cols-1 gap-5 md:mt-7 md:grid-cols-2 lg:grid-cols-4'>
           {filteredProducts.map((item) => (
-            <div key={item.id} className='rounded-xl border border-[#dfe7e9] bg-[#f7f8f8] p-3 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1'>
-              <img src={item.image} alt={item.name} className='h-[220px] w-full rounded-lg object-cover md:h-[240px] lg:h-[260px]' />
+            <div key={item.id} className='group rounded-xl border border-[#dfe7e9] bg-[#f7f8f8] p-3 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1'>
+              <div className="overflow-hidden rounded-lg">
+                <img src={item.image} alt={item.name} className='h-[220px] w-full object-cover md:h-[240px] lg:h-[260px] group-hover:scale-110 transition-transform duration-500' />
+              </div>
               <h3 className='mt-3 text-lg font-semibold text-[#435b61]'>{item.name}</h3>
               <p className='mt-1 text-3xl font-bold text-[#0f767c]'>${item.price}.00</p>
               <Link

@@ -33,12 +33,12 @@ const Products = async() => {
         {/* top Products  */}
         <div className='mt-8 grid grid-cols-1 gap-5 lg:grid-cols-3'>
             {/* Product 1  */}
-          <div className='rounded-2xl bg-[#f4f5f6] p-3 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 lg:row-span-2 animate__animated animate__fadeInUp animate__delay-1s'>
+          <div className='group rounded-2xl bg-[#f4f5f6] p-3 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 lg:row-span-2 animate__animated animate__fadeInUp animate__delay-1s'>
             <div className='relative overflow-hidden rounded-xl'>
               <img
                 src={featuredProduct?.image}
                 alt={featuredProduct?.name}
-                className='h-[260px] w-full object-cover md:h-[320px]'
+                className='h-[260px] w-full object-cover md:h-[320px] group-hover:scale-110 transition-transform duration-500'
               />
               <button className='absolute right-3 top-3 rounded-full bg-white p-2.5 text-[#c97c6f] shadow'>
                 <FaRegHeart />
@@ -58,8 +58,10 @@ const Products = async() => {
 
           {/* Product 2-3  */}
           {sideProducts.map((item, index) => (
-            <div key={item.id} className={`rounded-2xl bg-[#f4f5f6] p-3 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 animate__animated animate__fadeInUp animate__delay-${index + 1}s`}>
-              <img src={item.image} alt={item.name} className='h-[180px] w-full rounded-xl object-cover' />
+            <div key={item.id} className={`group rounded-2xl bg-[#f4f5f6] p-3 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 animate__animated animate__fadeInUp animate__delay-${index + 1}s`}>
+              <div className="overflow-hidden rounded-xl">
+                <img src={item.image} alt={item.name} className='h-[180px] w-full object-cover group-hover:scale-110 transition-transform duration-500' />
+              </div>
               <h4 className='mt-3 text-xl font-bold text-[#24363c] md:text-2xl'>{item.name}</h4>
               <p className='mt-1 text-sm font-medium text-[#3d555b] md:text-base'>Rating: {item.rating}</p>
               <p className='mt-1 text-xl font-semibold text-[#218a8a] md:text-2xl'>${item.price}.00</p>
