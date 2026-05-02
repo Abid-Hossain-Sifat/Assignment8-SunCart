@@ -37,6 +37,17 @@ const LoginPage = () => {
       }
     }
 
+  const handleGoogleSignIn = async () => {
+    try {
+      await authClient.signIn.social({
+        provider: "google",
+        callbackURL: "/",
+      });
+    } catch (err) {
+      toast.error(err.message || "Google sign-in failed!");
+    }
+  };
+
   return (
     <div className="flex min-h-screen items-center justify-center bg-gradient-to-br from-[#f8f9fa] to-[#e6ecec] p-4">
       <div className="w-full max-w-md rounded-3xl bg-white/80 p-8 shadow-xl backdrop-blur-md sm:p-10">
@@ -109,6 +120,7 @@ const LoginPage = () => {
         {/* Google Button */}
         <button
           type="button"
+          onClick={handleGoogleSignIn}
           className="flex w-full items-center justify-center gap-3 rounded-xl bg-[#fce4c4] py-3.5 text-sm font-bold text-gray-900 transition-all hover:bg-[#fbd6a6] active:scale-[0.98]"
         >
           <FcGoogle className="text-xl" />

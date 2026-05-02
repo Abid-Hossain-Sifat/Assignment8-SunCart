@@ -1,8 +1,8 @@
 import { betterAuth } from "better-auth";
-import { MongoClient } from "mongodb";
 import { mongodbAdapter } from "better-auth/adapters/mongodb";
+import clientPromise from "./db";
 
-const client = new MongoClient(process.env.MONGODB_URI);
+const client = await clientPromise;
 const db = client.db("SunCart");
 
 export const auth = betterAuth({
@@ -13,4 +13,13 @@ export const auth = betterAuth({
     enabled: true, 
     autoSignIn: false,
   }, 
+  socialProviders: { 
+    google: { 
+      clientId: process.env.GOOGLE_CLIENT_ID, 
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET, 
+    }, 
+  }, 
+  advanced: {
+    trustHost: true
+  }
 });
