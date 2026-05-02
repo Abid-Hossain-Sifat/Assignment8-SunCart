@@ -14,6 +14,7 @@ const Navbar = () => {
   
   const [isProfileDropdownOpen, setIsProfileDropdownOpen] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
   const dropdownRef = useRef(null)
 
   const handleLogout = async () => {
@@ -37,7 +38,20 @@ const Navbar = () => {
       }
     }
     document.addEventListener("mousedown", handleClickOutside)
-    return () => document.removeEventListener("mousedown", handleClickOutside)
+    
+    const handleScroll = () => {
+      if (window.scrollY > 20) {
+        setIsScrolled(true)
+      } else {
+        setIsScrolled(false)
+      }
+    }
+    window.addEventListener("scroll", handleScroll)
+    
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside)
+      window.removeEventListener("scroll", handleScroll)
+    }
   }, [])
 
   const navLinks = [
@@ -47,7 +61,7 @@ const Navbar = () => {
   ]
 
   return (
-    <div className="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm animate__animated animate__fadeInDown">
+    <div className={`sticky top-0 z-50 transition-all duration-300 animate__animated animate__fadeInDown ${isScrolled ? 'bg-white/70 backdrop-blur-md shadow-md' : 'bg-white shadow-sm'}`}>
       <div className='max-w-[80%] mx-auto flex justify-between py-5 items-center'>
         
         {/* Logo */}

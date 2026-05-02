@@ -33,7 +33,7 @@ const Products = async() => {
         {/* top Products  */}
         <div className='mt-8 grid grid-cols-1 gap-5 lg:grid-cols-3'>
             {/* Product 1  */}
-          <div className='rounded-2xl bg-[#f4f5f6] p-3 shadow-sm lg:row-span-2 animate__animated animate__fadeInUp animate__delay-1s'>
+          <div className='rounded-2xl bg-[#f4f5f6] p-3 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 lg:row-span-2 animate__animated animate__fadeInUp animate__delay-1s'>
             <div className='relative overflow-hidden rounded-xl'>
               <img
                 src={featuredProduct?.image}
@@ -58,7 +58,7 @@ const Products = async() => {
 
           {/* Product 2-3  */}
           {sideProducts.map((item, index) => (
-            <div key={item.id} className={`rounded-2xl bg-[#f4f5f6] p-3 shadow-sm animate__animated animate__fadeInUp animate__delay-${index + 1}s`}>
+            <div key={item.id} className={`rounded-2xl bg-[#f4f5f6] p-3 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 animate__animated animate__fadeInUp animate__delay-${index + 1}s`}>
               <img src={item.image} alt={item.name} className='h-[180px] w-full rounded-xl object-cover' />
               <h4 className='mt-3 text-xl font-bold text-[#24363c] md:text-2xl'>{item.name}</h4>
               <p className='mt-1 text-sm font-medium text-[#3d555b] md:text-base'>Rating: {item.rating}</p>
