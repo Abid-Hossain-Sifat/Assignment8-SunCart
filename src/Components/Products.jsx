@@ -49,9 +49,11 @@ const Products = async() => {
               <p className='text-2xl font-semibold text-[#218a8a] md:text-3xl'>${featuredProduct?.price}.00</p>
             </div>
             <p className='mt-2 text-sm font-medium text-[#3d555b] md:text-base'>Rating: {featuredProduct?.rating}</p>
-            <button className='mt-4 w-full rounded-xl bg-[#edcf9f] py-2.5 font-semibold text-[#2e2b25] transition-colors duration-200 hover:bg-[#e5c189]'>
-              View Details
-            </button>
+            <Link href={`/products/product/${featuredProduct?.id}`}>
+              <button className='mt-4 w-full rounded-xl bg-[#edcf9f] py-2.5 font-semibold text-[#2e2b25] transition-colors duration-200 hover:bg-[#e5c189]'>
+                View Details
+              </button>
+            </Link>
           </div>
 
           {/* Product 2-3  */}
@@ -61,9 +63,11 @@ const Products = async() => {
               <h4 className='mt-3 text-xl font-bold text-[#24363c] md:text-2xl'>{item.name}</h4>
               <p className='mt-1 text-sm font-medium text-[#3d555b] md:text-base'>Rating: {item.rating}</p>
               <p className='mt-1 text-xl font-semibold text-[#218a8a] md:text-2xl'>${item.price}.00</p>
-              <button className='mt-4 w-full rounded-xl border border-[#cae1dd] py-2.5 font-semibold text-[#2d8383] transition-colors duration-200 hover:bg-white'>
-                View Details
-              </button>
+              <Link href={`/products/product/${item.id}`}>
+                <button className='mt-4 w-full rounded-xl border border-[#cae1dd] py-2.5 font-semibold text-[#2d8383] transition-colors duration-200 hover:bg-white'>
+                  View Details
+                </button>
+              </Link>
             </div>
           ))}
 
