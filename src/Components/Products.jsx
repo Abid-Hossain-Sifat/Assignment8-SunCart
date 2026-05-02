@@ -13,7 +13,7 @@ const Products = async() => {
     <div>
       <div className='max-w-[80%] mx-auto mt-12 mb-10 md:mt-14 lg:mt-15'>
         {/* heading  */}
-        <div className='flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between'>
+        <div className='flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between animate__animated animate__fadeInDown'>
             <div>
                 <h1 className='text-xl font-bold text-gray-900 md:text-2xl'>
                     Popular Products
@@ -33,7 +33,7 @@ const Products = async() => {
         {/* top Products  */}
         <div className='mt-8 grid grid-cols-1 gap-5 lg:grid-cols-3'>
             {/* Product 1  */}
-          <div className='rounded-2xl bg-[#f4f5f6] p-3 shadow-sm lg:row-span-2'>
+          <div className='rounded-2xl bg-[#f4f5f6] p-3 shadow-sm lg:row-span-2 animate__animated animate__fadeInUp animate__delay-1s'>
             <div className='relative overflow-hidden rounded-xl'>
               <img
                 src={featuredProduct?.image}
@@ -57,8 +57,8 @@ const Products = async() => {
           </div>
 
           {/* Product 2-3  */}
-          {sideProducts.map((item) => (
-            <div key={item.id} className='rounded-2xl bg-[#f4f5f6] p-3 shadow-sm'>
+          {sideProducts.map((item, index) => (
+            <div key={item.id} className={`rounded-2xl bg-[#f4f5f6] p-3 shadow-sm animate__animated animate__fadeInUp animate__delay-${index + 1}s`}>
               <img src={item.image} alt={item.name} className='h-[180px] w-full rounded-xl object-cover' />
               <h4 className='mt-3 text-xl font-bold text-[#24363c] md:text-2xl'>{item.name}</h4>
               <p className='mt-1 text-sm font-medium text-[#3d555b] md:text-base'>Rating: {item.rating}</p>
@@ -73,7 +73,7 @@ const Products = async() => {
 
 
           {/* See more Card  */}
-          <div className='group rounded-2xl bg-gradient-to-r from-[#0c757a] to-[#0d6672] p-5 text-white shadow-sm transition-colors duration-300 hover:from-[#0f8489] hover:to-[#0f707d] md:p-6 lg:col-span-2'>
+          <div className='group rounded-2xl bg-gradient-to-r from-[#0c757a] to-[#0d6672] p-5 text-white shadow-sm transition-colors duration-300 hover:from-[#0f8489] hover:to-[#0f707d] md:p-6 lg:col-span-2 animate__animated animate__zoomIn animate__delay-2s'>
             <div className='flex flex-col items-start justify-between gap-4 md:flex-row md:items-center md:gap-6'>
               <div>
                 <h3 className='text-2xl font-bold md:text-3xl lg:text-4xl'>Discover More Summer Essentials</h3>

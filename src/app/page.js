@@ -4,6 +4,7 @@ import Care from "@/Components/Care";
 import Image from "next/image";
 import Banner from "@/Components/Banner";
 import Products from "@/Components/Products";
+import Brands from "@/Components/Brands";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Banner></Banner>
       <Products></Products>
       <Care></Care>
+      <Brands></Brands>
       {/* <Footer></Footer>  */}
     </div>
   );

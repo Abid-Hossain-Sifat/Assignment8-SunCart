@@ -8,7 +8,7 @@ const Care = () => {
   return (
     <div className='bg-[#f3f4f5]'>
       <div className='max-w-[80%] mx-auto py-14 md:py-16 lg:py-20'>
-        <div className='text-center'>
+        <div className='text-center animate__animated animate__fadeInDown'>
             <p className='text-[#e6be8a] font-bold text-sm md:text-base'>
                 SUNCART JOURNAL
             </p>
@@ -17,7 +17,7 @@ const Care = () => {
             </h3>
         </div>
         <div className='mt-10 grid grid-cols-1 gap-10 md:mt-12 md:grid-cols-2 lg:mt-15 lg:grid-cols-3 lg:gap-8'>
-            <div className='flex flex-col justify-start items-center text-center space-y-4 px-2'>
+            <div className='flex flex-col justify-start items-center text-center space-y-4 px-2 animate__animated animate__fadeInUp animate__delay-1s'>
                 <span className='p-3 bg-[#93f2f2] rounded-full'>
                     <MdOutlineWaterDrop className='h-[34px] w-[34px] text-[#006565] md:h-[38px] md:w-[38px] lg:h-[40px] lg:w-[40px]'></MdOutlineWaterDrop>
                 </span>
@@ -28,7 +28,7 @@ const Care = () => {
                     Beyond just drinking water, discover the electrolytes your skin craves after a day in the mediterranean heat.
                 </p>
             </div>
-            <div className='flex flex-col justify-start items-center text-center space-y-4 px-2'>
+            <div className='flex flex-col justify-start items-center text-center space-y-4 px-2 animate__animated animate__fadeInUp animate__delay-2s'>
                 <span className='p-3 bg-[#93f2f2] rounded-full'>
                     <MdOutlineWbSunny className='h-[34px] w-[34px] text-[#006565] md:h-[38px] md:w-[38px] lg:h-[40px] lg:w-[40px]'></MdOutlineWbSunny>
                 </span>
@@ -39,7 +39,7 @@ const Care = () => {
                     Timing is everything. Learn how to maximize your glow while minimizing UV stress during peak solar intensity.
                 </p>
             </div>
-            <div className='flex flex-col justify-start items-center text-center space-y-4 px-2'>
+            <div className='flex flex-col justify-start items-center text-center space-y-4 px-2 animate__animated animate__fadeInUp animate__delay-3s'>
                 <span className='p-3 bg-[#93f2f2] rounded-full'>
                     <RiFlowerLine className='h-[34px] w-[34px] text-[#006565] md:h-[38px] md:w-[38px] lg:h-[40px] lg:w-[40px]'></RiFlowerLine>
                 </span>

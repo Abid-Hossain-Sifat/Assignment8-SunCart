@@ -47,7 +47,7 @@ const Navbar = () => {
   ]
 
   return (
-    <div className="relative">
+    <div className="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm animate__animated animate__fadeInDown">
       <div className='max-w-[80%] mx-auto flex justify-between py-5 items-center'>
         
         {/* Logo */}
