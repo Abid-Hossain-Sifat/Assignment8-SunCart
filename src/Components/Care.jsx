@@ -17,37 +17,37 @@ const Care = () => {
             </h3>
         </div>
         <div className='mt-10 grid grid-cols-1 gap-10 md:mt-12 md:grid-cols-2 lg:mt-15 lg:grid-cols-3 lg:gap-8'>
-            <div className='flex flex-col justify-center items-center text-center space-y-3'>
+            <div className='flex flex-col justify-start items-center text-center space-y-4 px-2'>
                 <span className='p-3 bg-[#93f2f2] rounded-full'>
                     <MdOutlineWaterDrop className='h-[34px] w-[34px] text-[#006565] md:h-[38px] md:w-[38px] lg:h-[40px] lg:w-[40px]'></MdOutlineWaterDrop>
                 </span>
                 <h1 className='font-extrabold text-[20px] text-gray-900 md:text-[22px]'>
                     Hydration Strategy
                 </h1>
-                <p className='text-sm text-gray-700 md:text-base'>
-                    Beyond just drinking water, discover the<br /> electrolytes your skin craves after a day in the<br /> mediterranean heat.
+                <p className='text-sm text-gray-700 md:text-base leading-relaxed'>
+                    Beyond just drinking water, discover the electrolytes your skin craves after a day in the mediterranean heat.
                 </p>
             </div>
-            <div className='flex flex-col justify-center items-center text-center space-y-3'>
+            <div className='flex flex-col justify-start items-center text-center space-y-4 px-2'>
                 <span className='p-3 bg-[#93f2f2] rounded-full'>
                     <MdOutlineWbSunny className='h-[34px] w-[34px] text-[#006565] md:h-[38px] md:w-[38px] lg:h-[40px] lg:w-[40px]'></MdOutlineWbSunny>
                 </span>
                 <h1 className='font-extrabold text-[20px] text-gray-900 md:text-[22px]'>
-                    The Golden Hout
+                    The Golden Hour
                 </h1>
-                <p className='text-sm text-gray-700 md:text-base'>
-                    Timing is everything. Learn how to maximize<br /> your glow while minimizing UV stress during<br /> peak solar intensity.
+                <p className='text-sm text-gray-700 md:text-base leading-relaxed'>
+                    Timing is everything. Learn how to maximize your glow while minimizing UV stress during peak solar intensity.
                 </p>
             </div>
-            <div className='flex flex-col justify-center items-center text-center space-y-3'>
+            <div className='flex flex-col justify-start items-center text-center space-y-4 px-2'>
                 <span className='p-3 bg-[#93f2f2] rounded-full'>
                     <RiFlowerLine className='h-[34px] w-[34px] text-[#006565] md:h-[38px] md:w-[38px] lg:h-[40px] lg:w-[40px]'></RiFlowerLine>
                 </span>
                 <h1 className='font-extrabold text-[20px] text-gray-900 md:text-[22px]'>
                     Organic Recovery
                 </h1>
-                <p className='text-sm text-gray-700 md:text-base'>
-                    Explore our curation of post-sun botanicals that<br /> repair and rejuvenate your skin barrier overnight.
+                <p className='text-sm text-gray-700 md:text-base leading-relaxed'>
+                    Explore our curation of post-sun botanicals that repair and rejuvenate your skin barrier overnight.
                 </p>
             </div>
         </div>
