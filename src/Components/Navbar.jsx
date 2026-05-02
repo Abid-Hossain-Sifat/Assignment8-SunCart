@@ -1,5 +1,5 @@
 "use client"
-import React from 'react'
+import React, { useState } from 'react'
 import { ShoppingBag, User, UserPlus, LogOut } from 'lucide-react'
 import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
@@ -9,6 +9,7 @@ const Navbar = () => {
   const pathname = usePathname()
   const router = useRouter()
   const { data: session, isPending } = authClient.useSession()
+  const [imageError, setImageError] = useState(false)
 
   const handleLogout = async () => {
     await authClient.signOut();
@@ -57,8 +58,14 @@ const Navbar = () => {
           ) : session ? (
             <div className="flex items-center gap-4">
               <div className="h-10 w-10 overflow-hidden rounded-full border-2 border-[#008080] shadow-sm">
-                {session.user.image ? (
-                  <img src={session.user.image} alt={session.user.name} className="h-full w-full object-cover" />
+                {session.user.image && !imageError ? (
+                  <img 
+                    src={session.user.image} 
+                    alt={session.user.name} 
+                    className="h-full w-full object-cover" 
+                    referrerPolicy="no-referrer"
+                    onError={() => setImageError(true)}
+                  />
                 ) : (
                   <div className="flex h-full w-full items-center justify-center bg-[#008080] text-lg font-bold text-white uppercase">
                     {session.user.name?.charAt(0) || 'U'}

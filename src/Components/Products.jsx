@@ -1,6 +1,7 @@
 import React from 'react'
 import { FaArrowRight } from 'react-icons/fa6';
 import { FaRegHeart } from 'react-icons/fa';
+import Link from 'next/link';
 
 const Products = async() => {
     const res = await fetch ('https://assignment8-sun-cart.vercel.app/Data.json');
@@ -23,7 +24,7 @@ const Products = async() => {
             </div>
             <div>
                 <p>
-                    <a className='group flex gap-2.5 items-center text-sm md:text-base transition-colors duration-300 hover:text-[#008080]' href="#">
+                    <a className='group flex gap-2.5 items-center text-sm md:text-base transition-colors duration-300 hover:text-[#008080]' href="/products/all-products/default">
                         View All <span className='transition-transform duration-300 group-hover:translate-x-1.5'><FaArrowRight></FaArrowRight></span>
                     </a>
                 </p>
@@ -74,9 +75,11 @@ const Products = async() => {
                 <h3 className='text-2xl font-bold md:text-3xl lg:text-4xl'>Discover More Summer Essentials</h3>
                 <p className='mt-2 text-xs text-[#9be0df] md:text-sm'>Looking for more? Explore 15+ more items including beach floats, skincare,<br /> and trendy outfits to complete your collection.</p>
               </div>
+              <Link href="/products/all-products/default">
               <button className='rounded-full bg-white px-6 py-2.5 text-base font-semibold text-[#176a73] transition-colors duration-200 hover:bg-[#eafafa] md:px-8 md:py-3 md:text-lg'>
                 See more Products
               </button>
+              </Link>
             </div>
           </div>
         </div>
