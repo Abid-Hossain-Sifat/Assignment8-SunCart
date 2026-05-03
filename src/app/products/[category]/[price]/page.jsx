@@ -40,7 +40,7 @@ const ProductsByFilterPage = async ({ params }) => {
 
   return (
     <div className='bg-[#f2f4f5] py-8 md:py-10 lg:py-12'>
-      <div className='max-w-[80%] mx-auto'>
+      <div className='w-[90%] lg:max-w-[80%] mx-auto'>
         <div className='border-b border-[#dce4e7] pb-4 md:pb-5'>
           <div className='flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between'>
             <div className='flex flex-wrap items-center gap-2 md:gap-3'>
@@ -88,7 +88,10 @@ const ProductsByFilterPage = async ({ params }) => {
           </div>
         </div>
 
-        <div className='mt-6 grid grid-cols-1 gap-5 md:mt-7 md:grid-cols-2 lg:grid-cols-4'>
+        <div 
+          key={`${selectedCategorySlug}-${selectedPrice}`}
+          className='mt-6 grid grid-cols-1 gap-5 md:mt-7 md:grid-cols-2 lg:grid-cols-4 animate-in fade-in zoom-in-[0.98] slide-in-from-bottom-8 duration-700 ease-out'
+        >
           {filteredProducts.map((item) => (
             <div key={item.id} className='group rounded-xl border border-[#dfe7e9] bg-[#f7f8f8] p-3 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1'>
               <div className="overflow-hidden rounded-lg">
