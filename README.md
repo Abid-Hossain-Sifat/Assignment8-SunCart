@@ -199,8 +199,8 @@ sun-cart/
 - `auth.js` – BetterAuth server-side configuration
 - `auth-client.js` – BetterAuth client-side setup
 - `db.js` – Database configuration
-- Clean UI with Tailwind CSS + DaisyUI
-- Custom loading states (optional)
+- Clean UI with Tailwind CSS
+- Custom loading states
 - 404 Not Found page
 
 ---
@@ -209,11 +209,12 @@ sun-cart/
 
 - ⚛️ Next.js (App Router)
 - 🎨 Tailwind CSS
-- 🧩 DaisyUI / HeroUI
+- 🧩 DaisyUI
 - 🔐 BetterAuth
 - 💡 JavaScript (ES6+)
-- 🔔 React Toastify (or similar)
+- 🔔 React Toastify
 - 📦 Static JSON Data
+- 🎨 Animated.CSS
 
 ---
 
