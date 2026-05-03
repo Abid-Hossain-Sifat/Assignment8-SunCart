@@ -3,13 +3,13 @@ import { authClient } from "@/lib/auth-client";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 
-export default function ProductsLayout({ children }) {
+export default function SingleProductLayout({ children }) {
   const { data: session, isPending } = authClient.useSession();
   const router = useRouter();
 
   useEffect(() => {
     if (!isPending && !session) {
-      router.push('/signup');
+      router.push('/login');
     }
   }, [session, isPending, router]);
 
