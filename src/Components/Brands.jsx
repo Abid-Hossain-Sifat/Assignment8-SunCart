@@ -1,6 +1,6 @@
 import React from 'react';
-import { SiNike, SiAdidas, SiZara } from 'react-icons/si';
-import { FaTshirt } from 'react-icons/fa';
+import { SiNike, SiZara } from 'react-icons/si';
+import { FaTshirt, FaSpa } from 'react-icons/fa';
 
 const Brands = () => {
   const brands = [
@@ -20,9 +20,9 @@ const Brands = () => {
       icon: <SiNike className="w-10 h-10 md:w-12 md:h-12 text-[#006565]" />
     },
     {
-      name: "Adidas",
-      description: "A German multinational corporation that designs and manufactures premium sports shoes, clothing, and accessories.",
-      icon: <SiAdidas className="w-10 h-10 md:w-12 md:h-12 text-[#006565]" />
+      name: "Nivea",
+      description: "A German personal care brand that specializes in skin- and body-care products, known for its rich, protective creams.",
+      icon: <FaSpa className="w-10 h-10 md:w-12 md:h-12 text-[#006565]" />
     }
   ];
 
