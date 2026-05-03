@@ -11,7 +11,7 @@ const Navbar = () => {
   const router = useRouter()
   const { data: session, isPending } = authClient.useSession()
   const [imageError, setImageError] = useState(false)
-  
+
   const [isProfileDropdownOpen, setIsProfileDropdownOpen] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
@@ -38,7 +38,7 @@ const Navbar = () => {
       }
     }
     document.addEventListener("mousedown", handleClickOutside)
-    
+
     const handleScroll = () => {
       if (window.scrollY > 20) {
         setIsScrolled(true)
@@ -47,7 +47,7 @@ const Navbar = () => {
       }
     }
     window.addEventListener("scroll", handleScroll)
-    
+
     return () => {
       document.removeEventListener("mousedown", handleClickOutside)
       window.removeEventListener("scroll", handleScroll)
@@ -63,7 +63,7 @@ const Navbar = () => {
   return (
     <div className={`sticky top-0 z-50 transition-all duration-300 animate__animated animate__fadeInDown ${isScrolled ? 'bg-white/70 backdrop-blur-md shadow-md' : 'bg-white shadow-sm'}`}>
       <div className='w-[90%] lg:max-w-[80%] mx-auto flex justify-between py-4 lg:py-5 items-center'>
-        
+
         {/* Logo */}
         <div>
           <a href="/" className='flex gap-1 text-[#008080] items-center'>
@@ -90,22 +90,22 @@ const Navbar = () => {
         <div className='flex gap-3 lg:gap-4 items-center'>
           {isPending ? (
             <div className="flex gap-4 items-center">
-               <div className="w-9 h-9 lg:w-10 lg:h-10 bg-gray-200 rounded-full animate-pulse"></div>
+              <div className="w-9 h-9 lg:w-10 lg:h-10 bg-gray-200 rounded-full animate-pulse"></div>
             </div>
           ) : (
             <>
               {session ? (
                 <div className="relative" ref={dropdownRef}>
-                  <div 
+                  <div
                     className="h-9 w-9 lg:h-10 lg:w-10 overflow-hidden rounded-full border-2 border-[#008080] shadow-sm cursor-pointer hover:shadow-md transition-all"
                     onClick={() => setIsProfileDropdownOpen(!isProfileDropdownOpen)}
                     onMouseEnter={() => setIsProfileDropdownOpen(true)}
                   >
                     {session.user.image && !imageError ? (
-                      <img 
-                        src={session.user.image} 
-                        alt={session.user.name} 
-                        className="h-full w-full object-cover" 
+                      <img
+                        src={session.user.image}
+                        alt={session.user.name}
+                        className="h-full w-full object-cover"
                         referrerPolicy="no-referrer"
                         onError={() => setImageError(true)}
                       />
@@ -117,12 +117,12 @@ const Navbar = () => {
                   </div>
 
                   {isProfileDropdownOpen && (
-                    <div 
+                    <div
                       className="absolute right-0 mt-2 w-48 bg-white rounded-xl shadow-lg border border-gray-100 py-2 z-50 animate-in fade-in slide-in-from-top-2 duration-200"
                       onMouseLeave={() => setIsProfileDropdownOpen(false)}
                     >
                       <Link href="/my-profile">
-                        <button 
+                        <button
                           className="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#008080] transition-colors flex items-center gap-2"
                           onClick={() => setIsProfileDropdownOpen(false)}
                         >
@@ -131,8 +131,8 @@ const Navbar = () => {
                         </button>
                       </Link>
                       <div className="h-[1px] bg-gray-100 my-1"></div>
-                      <button 
-                        onClick={handleLogout} 
+                      <button
+                        onClick={handleLogout}
                         className="w-full text-left px-4 py-2 text-sm text-red-600 hover:bg-red-50 transition-colors flex items-center gap-2"
                       >
                         <LogOut className="h-4 w-4" />
@@ -168,7 +168,7 @@ const Navbar = () => {
               )}
 
               {/* Mobile Menu Toggle */}
-              <button 
+              <button
                 className="lg:hidden p-2 -mr-2 text-gray-600 hover:text-[#008080] transition-colors"
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 aria-label="Toggle Menu"

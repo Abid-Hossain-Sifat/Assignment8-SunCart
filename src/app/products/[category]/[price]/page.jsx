@@ -48,11 +48,10 @@ const ProductsByFilterPage = async ({ params }) => {
                 <Link
                   key={category.slug}
                   href={`/products/${category.slug}/${selectedPrice}`}
-                  className={`rounded-full px-4 py-1.5 text-sm font-medium transition-colors duration-200 ${
-                    selectedCategorySlug === category.slug
+                  className={`rounded-full px-4 py-1.5 text-sm font-medium transition-colors duration-200 ${selectedCategorySlug === category.slug
                       ? 'bg-[#0c757a] text-white'
                       : 'bg-[#d8ebec] text-[#47636a] hover:bg-[#cfe4e6]'
-                  }`}
+                    }`}
                 >
                   {category.label}
                 </Link>
@@ -73,11 +72,10 @@ const ProductsByFilterPage = async ({ params }) => {
                     <Link
                       key={option.value}
                       href={`/products/${selectedCategorySlug}/${option.value}`}
-                      className={`block rounded-md px-2.5 py-1.5 text-sm ${
-                        selectedPrice === option.value
+                      className={`block rounded-md px-2.5 py-1.5 text-sm ${selectedPrice === option.value
                           ? 'bg-[#e8f5f5] text-[#0f6f77]'
                           : 'text-[#5a7479] hover:bg-[#f2f8f8]'
-                      }`}
+                        }`}
                     >
                       {option.label}
                     </Link>
@@ -88,7 +86,7 @@ const ProductsByFilterPage = async ({ params }) => {
           </div>
         </div>
 
-        <div 
+        <div
           key={`${selectedCategorySlug}-${selectedPrice}`}
           className='mt-6 grid grid-cols-1 gap-5 md:mt-7 md:grid-cols-2 lg:grid-cols-4 animate-in fade-in zoom-in-[0.98] slide-in-from-bottom-8 duration-700 ease-out'
         >
